@@ -49,6 +49,8 @@ export default {
         ]
       },
 
+      // Main 
+
       footer: {
         aboutUs: {
           text: 'Mauris malesuada arcu eu posuere eleifen. Ut egestas tortor at leo egestas tincidunt. Nam tincidunt metus tristique tristique viverra. Mauris erat ante, egestas vitae dapibus seds.',

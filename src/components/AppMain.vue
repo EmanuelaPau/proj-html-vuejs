@@ -1,15 +1,16 @@
 <template>
     <main>
-        <!-- <AboutUs /> -->
+        <MainMail />
     </main>
 </template>
 
 <script>
 //  import HelloWorld from './HelloWorld.vue'
+import MainMail from './Main/MainMail.vue'
 export default {
     name: 'AppMain',
     components: {
-
+        MainMail
     },
     data() {
         return {
