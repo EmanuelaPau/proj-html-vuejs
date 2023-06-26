@@ -23,9 +23,12 @@ export default {
 </script>
 <style lang="scss">
 @import './styles/general.scss';
+@import './styles/partials/variables';
 @import "bootstrap/scss/bootstrap";
 
 div.app {
   font-family: 'Roboto', sans-serif;
+  background-color: $colorSecondary;
+  color: $colorLight;
 }
 </style>
