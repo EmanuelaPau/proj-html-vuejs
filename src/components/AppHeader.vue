@@ -31,6 +31,22 @@
             </div>
         </div>
         <!-- header search  -->
+        <div class="header-search line py-3">
+            <div class="container-fluid">
+                <div class="row my_container m-auto">
+                    <div class="col-5">
+                        <img id="my_logo" src="../../public/cropped-logo.png" alt="">
+                    </div>
+                    <div class="col-7 py-3 d-flex justify-content-end">
+                        <div class="my_searchbar d-flex">
+                            <input class="my_input bgColorSecondary" type="search" placeholder="Search ..."
+                                aria-label="Search">
+                            <button class="my_search-button bgColorPrimary" type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- header nav -->
     </div>
 </template>
@@ -55,6 +71,7 @@ export default {
     },
     methods() {
     },
+
 }		
 </script>
 <style scoped lang="scss">
@@ -62,7 +79,7 @@ export default {
 @use '../styles/partials/_mixins.scss';
 
 div.line {
-    border-bottom: 1px solid #54595F;
+    border-bottom: 1px solid #2b333d;
 }
 
 .header-socials {
@@ -97,6 +114,34 @@ div.line {
 
     i.google {
         color: #db4a39;
+    }
+}
+
+img#my_logo {
+    width: 185px;
+    cursor: pointers;
+}
+
+div.header-search {
+    height: 125px;
+
+    .my_searchbar {
+        height: 50px;
+
+        .my_input {
+            width: 250px;
+            color: #2b333d;
+            border: 1px solid #2b333d;
+            border-left: none;
+            padding: 1rem;
+        }
+
+        .my_search-button {
+            border: none;
+            width: 85px;
+            color: white;
+            font-weight: 600;
+        }
     }
 }
 </style> 
