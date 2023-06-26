@@ -1,16 +1,19 @@
 <template>
     <main>
+        <MainJumbo />
         <MainMail />
     </main>
 </template>
 
 <script>
 //  import HelloWorld from './HelloWorld.vue'
+import MainJumbo from './Main/MainJumbo.vue'
 import MainMail from './Main/MainMail.vue'
 export default {
     name: 'AppMain',
     components: {
-        MainMail
+        MainMail,
+        MainJumbo,
     },
     data() {
         return {
