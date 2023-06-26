@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>AboutUs</h1>
+        ABOUT
     </div>
 </template>
 
@@ -14,7 +14,6 @@ export default {
     },
     data() {
         return {
-
             // links: [
             //	'gino',
             //	'ciao',

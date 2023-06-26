@@ -1,16 +1,15 @@
 <template>
     <main>
-        <AboutUs />
+        <!-- <AboutUs /> -->
     </main>
 </template>
 
 <script>
 //  import HelloWorld from './HelloWorld.vue'
-import AboutUs from './Main/MainAboutUs.vue'
 export default {
     name: 'AppMain',
     components: {
-        AboutUs,
+
     },
     data() {
         return {

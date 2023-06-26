@@ -1,5 +1,7 @@
 <template>
     <footer>
+        <AboutUs />
+
         <div class="container-fluid">
             <div class="row my_container py-3">
                 <div class="col-6">
@@ -32,11 +34,12 @@
 </template>
 
 <script>
-//  import HelloWorld from './HelloWorld.vue'
+import AboutUs from './Footer/FooterAboutUs.vue'
 
 export default {
     name: 'AppFooter',
     components: {
+        AboutUs
     },
     data() {
         return {
