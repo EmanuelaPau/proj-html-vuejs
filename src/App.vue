@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <AppHeader />
     <AppMain />
     <AppFooter />
@@ -24,4 +24,8 @@ export default {
 <style lang="scss">
 @import './styles/general.scss';
 @import "bootstrap/scss/bootstrap";
+
+div.app {
+  font-family: 'Roboto', sans-serif;
+}
 </style>
