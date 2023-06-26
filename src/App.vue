@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <AppHeader />
+    <AppHeader :navDropdown="header.dropdowns" :navLi="header.li" :navMenuLi=header.list />
     <AppMain />
     <AppFooter :aboutUs=footer.aboutUs :movieCategory=footer.movieCategory :information=footer.information
       :recentPosts=footer.recentPosts :footerBottomNav=footer.footerBottomNav :socialIcons=footer.aboutUs.socialIcons />
@@ -22,6 +22,33 @@ export default {
   },
   data() {
     return {
+      header: {
+        dropdowns: [{
+          name: 'Home',
+          list: ['home', 'home1', 'home2', 'home3', 'home4', 'home5', 'home6']
+        },
+        {
+          name: 'Celebrity',
+          list: ['Celebrity', 'Celebrity Single']
+        },
+        {
+          name: 'Movie',
+          list: ['Movie Post', 'Top Rate Movies', 'Movie Category', 'Single Movie']
+        },
+        {
+          name: 'Page',
+          list: ['Pricing Table', 'Call To Action', 'My Account', 'Cart', 'Checkout', 'Wishlist']
+        },
+        {
+          name: 'Shop',
+          list: ['Shop Sidebar', 'No Sidebar']
+        },
+        ],
+        li: [
+          'Blog', 'Contact Us'
+        ]
+      },
+
       footer: {
         aboutUs: {
           text: 'Mauris malesuada arcu eu posuere eleifen. Ut egestas tortor at leo egestas tincidunt. Nam tincidunt metus tristique tristique viverra. Mauris erat ante, egestas vitae dapibus seds.',

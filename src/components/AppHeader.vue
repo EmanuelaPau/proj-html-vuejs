@@ -56,71 +56,19 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-reset " href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Home
+                        <li v-for="dropDown in navDropdown" class="nav-item dropdown show">
+                            <a class="text-reset text-decoration-none dropdown-toggle me-3" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ dropDown.name }}
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-reset" href="#">Action</a>
-                                <a class="dropdown-item text-reset" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-reset" href="#">Something else here</a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a v-for="element in dropDown.list" class="dropdown-item" href="#">{{ element }}</a>
+
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Celebrity
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-reset" href="#">Action</a>
-                                <a class="dropdown-item text-reset" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-reset" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Movie
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-reset" href="#">Action</a>
-                                <a class="dropdown-item text-reset" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-reset" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Page
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-reset" href="#">Action</a>
-                                <a class="dropdown-item text-reset" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-reset" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Shop
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-reset" href="#">Action</a>
-                                <a class="dropdown-item text-reset" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-reset" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-reset" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link text-reset" href="#">Contact Us</a>
+                        <li v-for="nav in navLi" class="nav-item">
+                            <a class="text-reset text-decoration-none me-3" href="">{{ nav }}</a>
                         </li>
 
                     </ul>
@@ -143,6 +91,10 @@
 
 export default {
     name: 'AppHeader',
+    props: {
+        navDropdown: 'Array',
+        navLi: 'Array',
+    },
     components: {
     },
     data() {
@@ -152,8 +104,6 @@ export default {
             //	'gino',
             //	'ciao',
             //	]
-
-
         }
     },
     methods() {
