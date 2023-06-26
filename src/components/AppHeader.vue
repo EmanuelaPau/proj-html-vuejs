@@ -37,7 +37,7 @@
                     <div class="col-5">
                         <img id="my_logo" src="../../public/cropped-logo.png" alt="">
                     </div>
-                    <div class="col-7 py-3 d-flex justify-content-end">
+                    <div class="col-7 py-3 px-0 d-flex justify-content-end">
                         <div class="my_searchbar d-flex">
                             <input class="my_input bgColorSecondary" type="search" placeholder="Search ..."
                                 aria-label="Search">
@@ -48,6 +48,93 @@
             </div>
         </div>
         <!-- header nav -->
+        <div class="line my_nav-font">
+            <nav class="my_container navbar navbar-expand-lg ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-reset " href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Home
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-reset" href="#">Action</a>
+                                <a class="dropdown-item text-reset" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-reset" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Celebrity
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-reset" href="#">Action</a>
+                                <a class="dropdown-item text-reset" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-reset" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Movie
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-reset" href="#">Action</a>
+                                <a class="dropdown-item text-reset" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-reset" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Page
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-reset" href="#">Action</a>
+                                <a class="dropdown-item text-reset" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-reset" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Shop
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-reset" href="#">Action</a>
+                                <a class="dropdown-item text-reset" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-reset" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-reset" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-reset" href="#">Contact Us</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="position-relative">
+                    <div class="basket-items-notification bgColorPrimary">
+                        <p class="m-0 text-center m-auto">0</p>
+                    </div>
+                    <i class="fa-solid fa-basket-shopping basket-icon">
+                    </i>
+                </div>
+            </nav>
+
+        </div>
     </div>
 </template>
 
@@ -143,5 +230,31 @@ div.header-search {
             font-weight: 600;
         }
     }
+}
+
+.my_nav-font {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+.basket-items-notification {
+    font-size: 12px;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    display: flex;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50%) translateY(-50%);
+}
+
+.basket-icon {
+    font-size: 15px;
+}
+
+.navbar-nav li {
+    margin-right: 11px;
 }
 </style> 
