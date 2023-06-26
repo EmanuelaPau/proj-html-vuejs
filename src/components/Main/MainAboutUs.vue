@@ -1,16 +1,16 @@
 <template>
-    <main>
-        <AboutUs />
-    </main>
+    <div>
+        <h1>AboutUs</h1>
+    </div>
 </template>
 
 <script>
 //  import HelloWorld from './HelloWorld.vue'
-import AboutUs from './Main/MainAboutUs.vue'
+
 export default {
-    name: 'AppMain',
+    name: 'AboutUs',
     components: {
-        AboutUs,
+
     },
     data() {
         return {
@@ -19,8 +19,6 @@ export default {
             //	'gino',
             //	'ciao',
             //	]
-
-
         }
     },
     methods() {
@@ -28,7 +26,9 @@ export default {
 }		
 </script>
 <style scoped lang="scss">
-@use '../styles/general.scss';
-@use '../styles/partials/_mixins.scss';
-@use '../styles/partials/variables.scss';
+@use '../../styles/general.scss';
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss'
+// @use '../styles/partials/_variables.scss';
+// @use '../styles/partials/_mixins.scss';
 </style> 
