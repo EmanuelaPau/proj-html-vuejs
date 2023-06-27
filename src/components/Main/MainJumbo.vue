@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div class="my_jumbo"></div>
+        <div class="my_jumbo marginBottom"></div>
         <div class="texts-container">
             <h1 class="txtColorPrimary">Coming Soon Movie</h1>
             <h2>Max Still</h2>
@@ -90,7 +90,5 @@ div.my_jumbo {
     background-size: cover;
     background-position: center;
     opacity: .5;
-    margin-bottom: 90px;
-
 }
 </style> 

@@ -1,5 +1,5 @@
 <template>
-    <div class="my_container my_mail d-flex flex-wrap justify-content-center">
+    <div class="my_container my_mail d-flex flex-wrap justify-content-center marginBottom">
         <div class="container-fluid">
             <div class="row d-flex justify-content-between flex-wrap">
                 <div class="col-4">
@@ -50,7 +50,6 @@ div.my_mail {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px;
-    margin-bottom: 90px;
 
     input {
         // background-color: transparent;

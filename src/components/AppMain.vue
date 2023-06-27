@@ -2,6 +2,10 @@
     <main>
         <MainJumbo />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
+        <MainTitle :title=titles.moviePlaylist.title :subtitle=titles.moviePlaylist.subtitle />
+        <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
+        <MainTitle :title=titles.latestNews.title :subtitle=titles.latestNews.subtitle />
+        <SquareCards />
         <MainMail />
     </main>
 </template>
@@ -11,12 +15,14 @@
 import MainJumbo from './Main/MainJumbo.vue'
 import MainMail from './Main/MainMail.vue'
 import MainTitle from './Main/MainTitle.vue'
+import SquareCards from './Main/MainSquareCards.vue'
 export default {
     name: 'AppMain',
     components: {
         MainMail,
         MainJumbo,
         MainTitle,
+        SquareCards,
     },
     data() {
         return {
