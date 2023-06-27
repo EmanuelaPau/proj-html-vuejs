@@ -48,8 +48,8 @@
             </div>
         </div>
         <!-- header nav -->
-        <div class="line my_nav-font">
-            <nav class="my_container navbar navbar-expand-lg ">
+        <div class=" my_nav-font ">
+            <nav class="my_container navbar navbar-expand-lg py-4 ">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
