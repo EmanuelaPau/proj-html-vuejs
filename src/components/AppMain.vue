@@ -3,6 +3,7 @@
         <MainJumbo />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
         <MainTitle :title=titles.moviePlaylist.title :subtitle=titles.moviePlaylist.subtitle />
+        <MovieVideoContainers :movieList="movieList" />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
         <MainTitle :title=titles.latestNews.title :subtitle=titles.latestNews.subtitle />
         <SquareCardsContainer />
@@ -12,6 +13,7 @@
 
 <script>
 //  import HelloWorld from './HelloWorld.vue'
+import MovieVideoContainers from './Main/MainMovieVideoContainer.vue'
 import MainJumbo from './Main/MainJumbo.vue'
 import MainMail from './Main/MainMail.vue'
 import MainTitle from './Main/MainTitle.vue'
@@ -19,6 +21,7 @@ import SquareCardsContainer from './Main/MainSquareCardsContainer.vue'
 export default {
     name: 'AppMain',
     components: {
+        MovieVideoContainers,
         MainMail,
         MainJumbo,
         MainTitle,
@@ -83,7 +86,70 @@ export default {
                         margin: 'mt-3'
                     },
                 ]
-            }
+            },
+
+            movieList: [
+                {
+                    img: '1-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '1014',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '2-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '748',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '3-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '376',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '4-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '305',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '5-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '492',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '6-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '280',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '7-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '306',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '8-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '349',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '9-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '373',
+                    date: 'February 12. 2016 '
+                },
+                {
+                    img: '1-150x150.jpg',
+                    title: 'Quisque auctor Movie in Strack',
+                    views: '511',
+                    date: 'February 12. 2016 '
+                }
+            ]
         }
     },
     methods() {
