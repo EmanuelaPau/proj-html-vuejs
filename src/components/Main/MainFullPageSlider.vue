@@ -1,0 +1,128 @@
+<template>
+    <div class="wrapper marginBottom d-flex justify-content-between align-items-center">
+        <button class="arrows"><i class="fa-solid fa-left-long"></i></button>
+        <div class="info">
+            <p>Welcome To Our Movie Site</p>
+            <h1>Our special <span>movies</span></h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industrioy. Lorem Ipsum has been the
+                industry standard dummy text ever since the 1500s, when an unknown</p>
+            <button>Read More</button>
+        </div>
+        <button class="arrows"><i class="fa-solid fa-right-long"></i></button>
+        <img src="slider.jpg" alt="">
+        <img src="slider2.jpg" alt="">
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'MovieSlider',
+    props: {
+    },
+    components: {
+    },
+    data() {
+        return {
+        }
+    },
+    methods() {
+    },
+}		
+</script>
+<style scoped lang="scss">
+@use '../../styles/partials/_variables.scss';
+@use '../../styles/partials/_mixins.scss';
+@use '../../styles/general.scss';
+
+.wrapper {
+    background-color: red;
+    width: 100%;
+    height: 730px;
+    position: relative;
+
+    img {
+        z-index: 0;
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .arrows {
+        z-index: 1;
+        margin: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 35px;
+        border: none;
+        background-color: transparent;
+        opacity: 0;
+        color: white;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all .5s;
+    }
+
+    .arrows:hover {
+        z-index: 1;
+        background-color: rgba(35, 35, 35, 0.299);
+        color: #13be13;
+    }
+
+    .info {
+        z-index: 1;
+        width: 450px;
+        text-align: center;
+        margin-left: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 50px;
+            font-weight: 300;
+            width: 500px
+        }
+
+        span {
+            color: #13be13;
+            ;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            border: none;
+            color: white;
+            background-color: #13be13;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: all .3s;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+
+        }
+    }
+}
+
+.wrapper:hover {
+    .arrows {
+        opacity: 1;
+    }
+}
+</style> 
+

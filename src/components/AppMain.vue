@@ -1,9 +1,10 @@
 <template>
     <main>
-        <MainJumbo />
+        <MovieSlider />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
         <MainTitle :title=titles.moviePlaylist.title :subtitle=titles.moviePlaylist.subtitle />
         <MovieVideoContainers :movieList="movieList" />
+        <MainJumbo />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
         <NewMoviesCardContainer :movieList=newMovieCard />
         <MainTitle :title=titles.latestNews.title :subtitle=titles.latestNews.subtitle />
@@ -14,6 +15,7 @@
 
 <script>
 //  import HelloWorld from './HelloWorld.vue'
+import MovieSlider from './Main/MainFullPageSlider.vue'
 import MovieVideoContainers from './Main/MainMovieVideoContainer.vue'
 import MainJumbo from './Main/MainJumbo.vue'
 import NewMoviesCardContainer from './Main/MainNewMoviesCardContainer.vue'
@@ -23,6 +25,7 @@ import MainMail from './Main/MainMail.vue'
 export default {
     name: 'AppMain',
     components: {
+        MovieSlider,
         MovieVideoContainers,
         MainJumbo,
         NewMoviesCardContainer,

@@ -1,5 +1,5 @@
 <template>
-    <div class="card-container">
+    <div class="card-container p-0">
         <div class="bg-cover">
             <div class="text-container">
                 <div class="rating">
