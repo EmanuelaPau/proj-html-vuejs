@@ -1,88 +1,52 @@
 <template>
-    <div class="my_container marginBottom">
-        <nav class="mb-5">
-            <ul class="list-unstyled d-flex">
-                <li class="active" value="all">All</li>
-                <li value="coming-soon"><span>Coming Soon</span></li>
-                <li value="latest-movie"><span>Latest Movie</span></li>
-                <li value="top-rating"><span>Top Rating</span></li>
-                <li value="top-series"><span>TV Series</span></li>
-            </ul>
-        </nav>
+    <div class="card-container">
+        <div class="bg-cover">
+            <div class="text-container">
+                <div class="rating">
+                    <i class="fa-solid fa-star me-2"></i>
+                    <span>0/10</span>
+                </div>
+                <div class="numbers">
+                    <p class="mb-0">2.30.00</p>
+                </div>
+                <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
+                <div class="infos">
+                    <h1>{{ movie.title }}</h1>
+                    <h2 class="d-inline mb-4">Category: </h2> <span>{{ movie.category }}</span>
+                    <p class="mb-0 mt-2">Release: February 12, 2016</p>
+                    <p class="mb-0">Genres :Drama, Action Releas</p>
+                </div>
 
-        <div class="container-fluid wrapper ">
-            <div class="row">
-                <div v-for="movie in newMovieCard" class="col-4 mb-4">
-
-                    <NewMovieCard class="mb-2" :movie=movie />
-
+            </div>
+            <div class="details d-flex justify-content-between">
+                <div class="pill round-sx">
+                    <p class="m-0">
+                        Details
+                    </p>
+                </div>
+                <div class="pill round-dx">
+                    <p class="m-0">
+                        {{ movie.views }} Views
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="bg-dark"></div>
+        <img :src="movie.img" :alt="movie.title">
     </div>
 </template>
 
 <script>
-import NewMovieCard from './NewMovieCard.vue'
+
 export default {
-    name: 'MovieVideoContainers',
+    name: 'NewMovieCard',
     props: {
+        movie: 'Object',
     },
     components: {
-        NewMovieCard,
     },
     data() {
         return {
-            newMovieCard: [
-                {
-                    img: 'card-1.jpg',
-                    title: 'Hurry Animate Blue Strack New Movie',
-                    category: 'Top Rating',
-                    release: 'February 12, 2016',
-                    genres: 'Drama, Action Releas',
-                    views: '426',
-                },
-                {
-                    img: 'card-2.jpg',
-                    title: 'Animate Blue Strack New Movie',
-                    category: ' Latest Movie',
-                    release: 'February 12, 2016',
-                    genres: 'Drama, Action Releas',
-                    views: '367',
-                },
-                {
-                    img: 'card-3.jpg',
-                    title: 'Blue Strack New Animate Movie',
-                    category: ' Coming Soon',
-                    release: 'February 12, 2016',
-                    genres: 'Drama, Action Releas',
-                    views: '428',
-                },
-                {
-                    img: 'card-4.jpg',
-                    title: 'Nulla Strack New Animate Movie',
-                    category: 'TV Series',
-                    release: 'February 12, 2016',
-                    genres: 'Drama, Action Releas',
-                    views: '342',
-                },
-                {
-                    img: 'card-5.jpg',
-                    title: 'Quisque in Strack New Movie',
-                    category: 'Top Rating',
-                    release: 'February 12, 2016',
-                    genres: 'Drama, Action Releas',
-                    views: '354',
-                },
-                {
-                    img: 'card-6.jpg',
-                    title: 'New Movie Quisque in Strack',
-                    category: 'Latest Movie',
-                    release: 'February 12, 2016',
-                    genres: 'Drama, Action Releas',
-                    views: '511',
-                },
-            ],
         }
     },
     methods() {
@@ -93,38 +57,6 @@ export default {
 @use '../../styles/partials/_variables.scss';
 @use '../../styles/partials/_mixins.scss';
 @use '../../styles/general.scss';
-
-nav {
-    height: 40px;
-
-    ul {
-        font-size: 18px;
-
-        li {
-            margin-right: 35px;
-            cursor: pointer;
-            transition: all .8s;
-        }
-
-        li:hover {
-            color: #13be13;
-
-            span:after {
-                width: 100%;
-            }
-        }
-
-        span:after {
-            content: "";
-            display: table;
-            height: 5px;
-            width: 0;
-            border-bottom: 1px solid #13be13;
-            transition: all .5s;
-        }
-
-    }
-}
 
 div.card-container {
     height: 530px;
@@ -191,7 +123,8 @@ div.card-container {
                 transition: all .7s;
 
                 h1 {
-                    font-size: 22px;
+                    font-size: 25px;
+                    font-weight: 700;
                 }
 
                 h2 {

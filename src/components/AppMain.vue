@@ -5,7 +5,7 @@
         <MainTitle :title=titles.moviePlaylist.title :subtitle=titles.moviePlaylist.subtitle />
         <MovieVideoContainers :movieList="movieList" />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
-        <NewMoviesCardContainer />
+        <NewMoviesCardContainer :movieList=newMovieCard />
         <MainTitle :title=titles.latestNews.title :subtitle=titles.latestNews.subtitle />
         <SquareCardsContainer />
         <MainMail />
@@ -152,7 +152,7 @@ export default {
                     views: '511',
                     date: 'February 12. 2016 '
                 }
-            ]
+            ],
         }
     },
     methods() {
