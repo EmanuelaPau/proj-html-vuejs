@@ -48,6 +48,7 @@ export default {
         // z-index: 0;
         position: absolute;
         height: 100%;
+        width: 100%;
         object-fit: cover;
         object-position: right;
         transition: all .7s;
