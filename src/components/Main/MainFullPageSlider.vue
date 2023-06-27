@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper marginBottom d-flex justify-content-between align-items-center">
-        <button class="arrows"><i class="fa-solid fa-left-long"></i></button>
+        <button class="arrows" @click="index < 2 ? index = 2 : index--"><i class="fa-solid fa-left-long"></i></button>
         <div class="info">
             <p>Welcome To Our Movie Site</p>
             <h1>Our special <span>movies</span></h1>
@@ -8,9 +8,9 @@
                 industry standard dummy text ever since the 1500s, when an unknown</p>
             <button>Read More</button>
         </div>
-        <button class="arrows"><i class="fa-solid fa-right-long"></i></button>
-        <img src="slider.jpg" alt="">
-        <img src="slider2.jpg" alt="">
+        <button class="arrows" @click="index > 1 ? index = 1 : index++"><i class=" fa-solid fa-right-long"></i></button>
+        <img :class="index == 2 ? 'opacity-100' : 'opacity-0'" src="slider2.jpg" alt="">
+        <img :class="index == 1 ? 'opacity-100' : 'opacity-0'" src="slider.jpg" alt="">
     </div>
 </template>
 
@@ -23,9 +23,14 @@ export default {
     },
     data() {
         return {
+            index: '1'
         }
     },
-    methods() {
+    methods: {
+
+        moveToNextSlide() {
+
+        },
     },
 }		
 </script>
@@ -35,17 +40,17 @@ export default {
 @use '../../styles/general.scss';
 
 .wrapper {
-    background-color: red;
     width: 100%;
     height: 730px;
     position: relative;
 
     img {
-        z-index: 0;
+        // z-index: 0;
         position: absolute;
         height: 100%;
         object-fit: cover;
         object-position: right;
+        transition: all .7s;
     }
 
     .arrows {
