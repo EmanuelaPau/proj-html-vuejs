@@ -5,9 +5,7 @@
         <MainTitle :title=titles.moviePlaylist.title :subtitle=titles.moviePlaylist.subtitle />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
         <MainTitle :title=titles.latestNews.title :subtitle=titles.latestNews.subtitle />
-        <SquareCardsContainer :bigCardName=squareCards.big.title :bigCardImg=squareCards.big.img
-            :bigCardFont=squareCards.big.fontSize :bigCardDate="squareCards.big.date"
-            :bigCardDisplay="squareCards.big.display" :smallCard=squareCards.small />
+        <SquareCardsContainer />
         <MainMail />
     </main>
 </template>
@@ -48,7 +46,8 @@ export default {
                     img: 'blog-570x570.jpg',
                     fontSize: 'my_h1-big',
                     date: '14 April, 2020',
-                    display: ''
+                    display: '',
+                    margin: ''
                 },
                 small: [
                     {
@@ -56,28 +55,32 @@ export default {
                         img: 'blog2-570x570.jpg',
                         fontSize: 'my_h1-small',
                         date: '14 April, 2020',
-                        display: 'd-none'
+                        display: 'd-none',
+                        margin: 'mb-3'
                     },
                     {
                         title: 'consequat Nam lectus nibh aucibus It has turpis',
                         img: 'blog3-570x570.jpg',
                         fontSize: 'my_h1-small',
                         date: '14 April, 2020',
-                        display: 'd-none'
+                        display: 'd-none',
+                        margin: 'mb-3'
                     },
                     {
                         title: 'consequat Nam lectus nibh aucibus It has turpis',
                         img: 'blog4-570x570.jpg',
                         fontSize: 'my_h1-small',
                         date: '14 April, 2020',
-                        display: 'd-none'
+                        display: 'd-none',
+                        margin: 'mt-3'
                     },
                     {
                         title: 'consequat Nam lectus nibh aucibus It has turpis',
                         img: 'blog5-570x570.jpg',
                         fontSize: 'my_h1-small',
                         date: '14 April, 2020',
-                        display: 'd-none'
+                        display: 'd-none',
+                        margin: 'mt-3'
                     },
                 ]
             }

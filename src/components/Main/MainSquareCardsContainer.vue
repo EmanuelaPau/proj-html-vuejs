@@ -1,93 +1,18 @@
 <template>
     <div class="my_container marginBottom">
-        <div class="container-fluid">
+        <div class="container-fluid p-0">
             <div class="row">
-                <div class="col-6 pe-2">
-                    <div class="card-item">
-                        <div class="date bgColorPrimary">
-                            <p>{{ bigCardDate }}</p>
-                        </div>
-                        <div class="text-box">
-                            <h1 :class="bigCardFont">{{ bigCardName }}</h1>
-                            <div class="d-flex flex-wrap justify-content-between">
-                                <div class="pill">
-                                    <p>Details</p>
-                                </div>
-
-                                <div id="share" class="share bgColorPrimary">
-                                    <div class="social">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </div>
-                                    <div class="social">
-                                        <i class="fa-brands fa-twitter "></i>
-                                    </div>
-                                    <div class="social">
-                                        <i class="fa-brands fa-google-plus-g "></i>
-                                    </div>
-                                    <div class="social">
-                                        <i class="fa-brands fa-linkedin-in "></i>
-                                    </div>
-                                </div>
-                                <nav>
-                                    <ul class="list-unstyled d-flex">
-                                        <li :class="bigCardDisplay">moviestar</li>
-                                        <li :class="bigCardDisplay">0 Comment</li>
-                                        <li id="nav-share">Share</li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="gradient"></div>
-                        <img :src="bigCardImg" alt="">
-                    </div>
+                <div class="col-6 p-3">
+                    <MainSquareCards class="" :bigCardName=squareCards.big.title :bigCardImg=squareCards.big.img
+                        :bigCardFont=squareCards.big.fontSize :bigCardDate="squareCards.big.date"
+                        :bigCardDisplay="squareCards.big.display" :smallCard=squareCards.small
+                        :bigCardMargin="squareCards.big.margin" />
                 </div>
 
-                <div class="col-6 ps-3 d-flex justify-content-between align-items-end">
-                    <div class="container-fluid p-0 h-100 d-flex flex-column justify-content-between">
-                        <div class="row">
-                            <div v-for="card in smallCard" class="col-6 ">
-                                <div class="card-item">
-                                    <div class="date bgColorPrimary">
-                                        <p>{{ card.date }}</p>
-                                    </div>
-                                    <div class="text-box">
-                                        <h1 :class="card.fontSize">{{ card.title }}</h1>
-                                        <div class="d-flex flex-wrap justify-content-between">
-                                            <div class="pill">
-                                                <p>Details</p>
-                                            </div>
-
-                                            <div id="share" class="share bgColorPrimary">
-                                                <div class="social">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-twitter "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-google-plus-g "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-linkedin-in "></i>
-                                                </div>
-                                            </div>
-                                            <nav>
-                                                <ul class="list-unstyled d-flex">
-                                                    <li :class="card.display">moviestar</li>
-                                                    <li :class="card.display">0 Comment</li>
-                                                    <li id="nav-share">Share</li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <div class="gradient"></div>
-                                    <img :src="card.img" alt="">
-                                </div>
-                            </div>
-
-                        </div>
-
-
+                <div class="col-6 d-flex flex-wrap p-0">
+                    <div v-for="card in squareCards.small" class="col-6 p-3">
+                        <MainSquareCards :bigCardName=card.title :bigCardImg=card.img :bigCardFont=card.fontSize
+                            :bigCardDate="card.date" :bigCardDisplay="card.display" :bigCardMargin="card.margin" />
                     </div>
                 </div>
 
@@ -98,24 +23,62 @@
 </template>
 
 <script>
-
+import MainSquareCards from './MainSquareCards.vue';
 export default {
     name: 'SquareCardsContainer',
     props: {
-        bigCardName: 'String',
-        bigCardImg: 'String',
-        bigCardFont: 'String',
-        bigCardDate: 'String',
-        smallCard: 'Array'
+
     },
     components: {
+        MainSquareCards,
+        MainSquareCards
     },
     data() {
         return {
-            // links: [
-            //	'gino',
-            //	'ciao',
-            //	]
+            squareCards: {
+                big: {
+                    title: 'Actor The Concept Movie High Concept Theory see the post',
+                    img: 'blog-570x570.jpg',
+                    fontSize: 'my_h1-big',
+                    date: '14 April, 2020',
+                    display: '',
+                    margin: ''
+                },
+                small: [
+                    {
+                        title: 'consequat Nam lectus nibh aucibus It has turpis',
+                        img: 'blog2-570x570.jpg',
+                        fontSize: 'my_h1-small',
+                        date: '14 April, 2020',
+                        display: 'd-none',
+                        margin: 'mb-3'
+                    },
+                    {
+                        title: 'consequat Nam lectus nibh aucibus It has turpis',
+                        img: 'blog3-570x570.jpg',
+                        fontSize: 'my_h1-small',
+                        date: '14 April, 2020',
+                        display: 'd-none',
+                        margin: 'mb-3'
+                    },
+                    {
+                        title: 'consequat Nam lectus nibh aucibus It has turpis',
+                        img: 'blog4-570x570.jpg',
+                        fontSize: 'my_h1-small',
+                        date: '14 April, 2020',
+                        display: 'd-none',
+                        margin: 'mt-3'
+                    },
+                    {
+                        title: 'consequat Nam lectus nibh aucibus It has turpis',
+                        img: 'blog5-570x570.jpg',
+                        fontSize: 'my_h1-small',
+                        date: '14 April, 2020',
+                        display: 'd-none',
+                        margin: 'mt-3'
+                    },
+                ]
+            }
         }
     },
     methods() {

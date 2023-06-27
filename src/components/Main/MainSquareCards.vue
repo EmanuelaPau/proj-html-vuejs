@@ -1,215 +1,40 @@
 <template>
-    <div class="my_container marginBottom">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6 pe-2">
-                    <div class="card-item">
-                        <div class="date bgColorPrimary">
-                            <p>April 14, 2020</p>
-                        </div>
-                        <div class="text-box">
-                            <h1>Actor The Concept Movie High Concept Theory see the post</h1>
-                            <div class="d-flex flex-wrap justify-content-between">
-                                <div class="pill">
-                                    <p>Details</p>
-                                </div>
-
-                                <div id="share" class="share bgColorPrimary">
-                                    <div class="social">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </div>
-                                    <div class="social">
-                                        <i class="fa-brands fa-twitter "></i>
-                                    </div>
-                                    <div class="social">
-                                        <i class="fa-brands fa-google-plus-g "></i>
-                                    </div>
-                                    <div class="social">
-                                        <i class="fa-brands fa-linkedin-in "></i>
-                                    </div>
-                                </div>
-                                <nav>
-                                    <ul class="list-unstyled d-flex">
-                                        <li>moviestar</li>
-                                        <li>0 Comment</li>
-                                        <li id="nav-share">Share</li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="gradient"></div>
-                        <img src="blog-570x570.jpg" alt="">
-                    </div>
+    <div class="card-item">
+        <div class="date bgColorPrimary">
+            <p>{{ bigCardDate }}</p>
+        </div>
+        <div class="text-box">
+            <h1 :class="bigCardFont">{{ bigCardName }}</h1>
+            <div class="d-flex flex-wrap justify-content-between">
+                <div class="pill">
+                    <p>Details</p>
                 </div>
 
-                <div class="col-6 ps-3 d-flex justify-content-between align-items-end">
-                    <div class="container-fluid p-0 h-100 d-flex flex-column justify-content-between">
-                        <div class="row">
-                            <div class="col-6 ">
-                                <div class="card-item">
-                                    <div class="date bgColorPrimary">
-                                        <p>April 14, 2020</p>
-                                    </div>
-                                    <div class="text-box">
-                                        <h1>Actor The Concept Movie High Concept Theory see the post</h1>
-                                        <div class="d-flex flex-wrap justify-content-between">
-                                            <div class="pill">
-                                                <p>Details</p>
-                                            </div>
-
-                                            <div id="share" class="share bgColorPrimary">
-                                                <div class="social">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-twitter "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-google-plus-g "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-linkedin-in "></i>
-                                                </div>
-                                            </div>
-                                            <nav>
-                                                <ul class="list-unstyled d-flex">
-                                                    <li>moviestar</li>
-                                                    <li>0 Comment</li>
-                                                    <li id="nav-share">Share</li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <div class="gradient"></div>
-                                    <img src="blog-570x570.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-6 ">
-                                <div class="card-item">
-                                    <div class="date bgColorPrimary">
-                                        <p>April 14, 2020</p>
-                                    </div>
-                                    <div class="text-box">
-                                        <h1>Actor The Concept Movie High Concept Theory see the post</h1>
-                                        <div class="d-flex flex-wrap justify-content-between">
-                                            <div class="pill">
-                                                <p>Details</p>
-                                            </div>
-
-                                            <div id="share" class="share bgColorPrimary">
-                                                <div class="social">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-twitter "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-google-plus-g "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-linkedin-in "></i>
-                                                </div>
-                                            </div>
-                                            <nav>
-                                                <ul class="list-unstyled d-flex">
-                                                    <li>moviestar</li>
-                                                    <li>0 Comment</li>
-                                                    <li id="nav-share">Share</li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <div class="gradient"></div>
-                                    <img src="blog-570x570.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="card-item">
-                                    <div class="date bgColorPrimary">
-                                        <p>April 14, 2020</p>
-                                    </div>
-                                    <div class="text-box">
-                                        <h1>Actor The Concept Movie High Concept Theory see the post</h1>
-                                        <div class="d-flex flex-wrap justify-content-between">
-                                            <div class="pill">
-                                                <p>Details</p>
-                                            </div>
-
-                                            <div id="share" class="share bgColorPrimary">
-                                                <div class="social">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-twitter "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-google-plus-g "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-linkedin-in "></i>
-                                                </div>
-                                            </div>
-                                            <nav>
-                                                <ul class="list-unstyled d-flex">
-                                                    <li>moviestar</li>
-                                                    <li>0 Comment</li>
-                                                    <li id="nav-share">Share</li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <div class="gradient"></div>
-                                    <img src="blog-570x570.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="card-item">
-                                    <div class="date bgColorPrimary">
-                                        <p>April 14, 2020</p>
-                                    </div>
-                                    <div class="text-box">
-                                        <h1>Actor The Concept Movie High Concept Theory see the post</h1>
-                                        <div class="d-flex flex-wrap justify-content-between">
-                                            <div class="pill">
-                                                <p>Details</p>
-                                            </div>
-
-                                            <div id="share" class="share bgColorPrimary">
-                                                <div class="social">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-twitter "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-google-plus-g "></i>
-                                                </div>
-                                                <div class="social">
-                                                    <i class="fa-brands fa-linkedin-in "></i>
-                                                </div>
-                                            </div>
-                                            <nav>
-                                                <ul class="list-unstyled d-flex">
-                                                    <li>moviestar</li>
-                                                    <li>0 Comment</li>
-                                                    <li id="nav-share">Share</li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <div class="gradient"></div>
-                                    <img src="blog-570x570.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
+                <div id="share" class="share bgColorPrimary">
+                    <div class="social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="social">
+                        <i class="fa-brands fa-twitter "></i>
+                    </div>
+                    <div class="social">
+                        <i class="fa-brands fa-google-plus-g "></i>
+                    </div>
+                    <div class="social">
+                        <i class="fa-brands fa-linkedin-in "></i>
                     </div>
                 </div>
-
-
+                <nav>
+                    <ul class="list-unstyled d-flex">
+                        <li :class="bigCardDisplay">moviestar</li>
+                        <li :class="bigCardDisplay">0 Comment</li>
+                        <li id="nav-share">Share</li>
+                    </ul>
+                </nav>
             </div>
         </div>
+        <div class="gradient"></div>
+        <img :src="bigCardImg" alt="">
     </div>
 </template>
 
@@ -218,6 +43,12 @@
 export default {
     name: 'SquareCards',
     props: {
+        bigCardName: 'String',
+        bigCardImg: 'String',
+        bigCardFont: 'String',
+        bigCardDate: 'String',
+        bigCardDisplay: 'String',
+        smallCard: 'Array'
     },
     components: {
     },
@@ -237,6 +68,17 @@ export default {
 @use '../../styles/partials/_variables.scss';
 @use '../../styles/partials/_mixins.scss';
 @use '../../styles/general.scss';
+
+
+.my_h1-big {
+    font-size: 22px;
+    margin: 30px;
+}
+
+.my_h1-small {
+    font-size: 16px;
+    margin: 30px 30px 18px 30px;
+}
 
 div.card-item {
     width: 100%;
@@ -274,9 +116,7 @@ div.card-item {
         z-index: 2;
 
         h1 {
-            font-size: 22px;
             font-weight: 700;
-            margin: 30px;
             cursor: pointer;
         }
 
