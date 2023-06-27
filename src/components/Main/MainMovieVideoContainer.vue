@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid my_container">
+    <div class="container-fluid my_container marginBottom">
         <div class="row my_row">
             <div class="col-8 p-0 pe-4 video_container">
                 <iframe src="https://www.youtube.com/embed/BP0k4SdquG0?wmode=opaque&rel=1" frameborder="0"></iframe>
