@@ -2,12 +2,14 @@
     <div class="wrapper">
         <div class="my_jumbo"></div>
         <div class="texts-container">
-            Coming Soon Movie
-            <h1>Max Still</h1>
+            <h1 class="txtColorPrimary">Coming Soon Movie</h1>
+            <h2>Max Still</h2>
 
-            jon player & Emily Rose
+            <div class="text-box">
+                <h3>jon player<span class="txtColorPrimary"> & </span> Emily Rose</h3>
 
-            The countdown is finished!
+                <h4>The countdown is finished!</h4>
+            </div>
         </div>
     </div>
 </template>
@@ -47,6 +49,37 @@ div.texts-container {
     transform: translateY(-50%);
     left: 50%;
     padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 70px;
+        font-weight: 300;
+        ;
+    }
+
+    .text-box {
+        background-color: #0f1828;
+        height: 90px;
+        width: 380px;
+
+        h3 {
+            font-size: 22px;
+            font-weight: 700;
+            padding: 10px;
+        }
+
+        h4 {
+            font-size: 16.8px;
+            font-weight: 700;
+            padding: 5px;
+        }
+    }
 }
 
 div.my_jumbo {
