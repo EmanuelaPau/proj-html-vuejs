@@ -5,6 +5,7 @@
         <MainTitle :title=titles.moviePlaylist.title :subtitle=titles.moviePlaylist.subtitle />
         <MovieVideoContainers :movieList="movieList" />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
+        <NewMoviesCardContainer />
         <MainTitle :title=titles.latestNews.title :subtitle=titles.latestNews.subtitle />
         <SquareCardsContainer />
         <MainMail />
@@ -15,17 +16,19 @@
 //  import HelloWorld from './HelloWorld.vue'
 import MovieVideoContainers from './Main/MainMovieVideoContainer.vue'
 import MainJumbo from './Main/MainJumbo.vue'
-import MainMail from './Main/MainMail.vue'
+import NewMoviesCardContainer from './Main/MainNewMoviesCardContainer.vue'
 import MainTitle from './Main/MainTitle.vue'
 import SquareCardsContainer from './Main/MainSquareCardsContainer.vue'
+import MainMail from './Main/MainMail.vue'
 export default {
     name: 'AppMain',
     components: {
         MovieVideoContainers,
-        MainMail,
         MainJumbo,
+        NewMoviesCardContainer,
         MainTitle,
         SquareCardsContainer,
+        MainMail,
     },
     data() {
         return {
