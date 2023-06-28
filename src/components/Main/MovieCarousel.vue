@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="d-flex cards_wrapper justify-content-start align-items-center">
-                <div v-for="movie in  movieList " class="col-4 p-0 card_container "
+                <div v-for="movie in  movieList " class="col-12 col-md-6 col-lg-4 p-0 card_container "
                     :class="movie.state == 'on' ? 'my_active' : 'my_off'">
                     <MovieCard :class="movie.state == 'on' ? 'my_active' : 'my_off'" :movie=movie />
                 </div>
