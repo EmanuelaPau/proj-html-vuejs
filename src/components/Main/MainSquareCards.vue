@@ -10,7 +10,7 @@
                     <p>Details</p>
                 </div>
 
-                <div id="share" class="share bgColorPrimary">
+                <!-- <div id="share" class="share bgColorPrimary">
                     <div class="social">
                         <i class="fa-brands fa-facebook-f"></i>
                     </div>
@@ -23,18 +23,19 @@
                     <div class="social">
                         <i class="fa-brands fa-linkedin-in "></i>
                     </div>
-                </div>
+                </div> -->
                 <nav>
                     <ul class="list-unstyled d-flex">
                         <li :class="bigCardDisplay">moviestar</li>
                         <li :class="bigCardDisplay">0 Comment</li>
-                        <li id="nav-share">Share</li>
+                        <li @mouseover="card.showShare = 'on'" @mouseleave="card.showShare = 'off'" id="nav-share">Share
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
         <div class="gradient"></div>
-        <img :src="bigCardImg" alt="">
+        <img :src="bigCardImg" :alt="bigCardName">
     </div>
 </template>
 
@@ -48,16 +49,13 @@ export default {
         bigCardFont: 'String',
         bigCardDate: 'String',
         bigCardDisplay: 'String',
-        smallCard: 'Array'
+        smallCard: 'Array',
+        card: 'Array',
     },
     components: {
     },
     data() {
         return {
-            // links: [
-            //	'gino',
-            //	'ciao',
-            //	]
         }
     },
     methods() {

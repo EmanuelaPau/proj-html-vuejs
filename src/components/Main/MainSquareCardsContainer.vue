@@ -2,15 +2,15 @@
     <div class="my_container marginBottom">
         <div class="container-fluid p-0">
             <div class="row">
-                <div class="col-6 p-3">
+                <div class="col-12 col-lg-6 p-3">
                     <MainSquareCards class="" :bigCardName=squareCards.big.title :bigCardImg=squareCards.big.img
                         :bigCardFont=squareCards.big.fontSize :bigCardDate="squareCards.big.date"
                         :bigCardDisplay="squareCards.big.display" :smallCard=squareCards.small
-                        :bigCardMargin="squareCards.big.margin" />
+                        :bigCardMargin="squareCards.big.margin" :card="squareCards" />
                 </div>
 
-                <div class="col-6 d-flex flex-wrap p-0">
-                    <div v-for="card in squareCards.small" class="col-6 p-3">
+                <div class="col-12 col-lg-6 d-flex flex-wrap p-0">
+                    <div v-for="card in squareCards.small" class="col-lg-6 col-12 p-3">
                         <MainSquareCards :bigCardName=card.title :bigCardImg=card.img :bigCardFont=card.fontSize
                             :bigCardDate="card.date" :bigCardDisplay="card.display" :bigCardMargin="card.margin" />
                     </div>
@@ -42,7 +42,8 @@ export default {
                     fontSize: 'my_h1-big',
                     date: '14 April, 2020',
                     display: '',
-                    margin: ''
+                    margin: '',
+                    showShare: 'off'
                 },
                 small: [
                     {
@@ -51,7 +52,8 @@ export default {
                         fontSize: 'my_h1-small',
                         date: '14 April, 2020',
                         display: 'd-none',
-                        margin: 'mb-3'
+                        margin: 'mb-3',
+                        showShare: 'off'
                     },
                     {
                         title: 'consequat Nam lectus nibh aucibus It has turpis',
@@ -59,7 +61,8 @@ export default {
                         fontSize: 'my_h1-small',
                         date: '14 April, 2020',
                         display: 'd-none',
-                        margin: 'mb-3'
+                        margin: 'mb-3',
+                        showShare: 'off'
                     },
                     {
                         title: 'consequat Nam lectus nibh aucibus It has turpis',
@@ -67,7 +70,8 @@ export default {
                         fontSize: 'my_h1-small',
                         date: '14 April, 2020',
                         display: 'd-none',
-                        margin: 'mt-3'
+                        margin: 'mt-3',
+                        showShare: 'off'
                     },
                     {
                         title: 'consequat Nam lectus nibh aucibus It has turpis',
@@ -75,7 +79,8 @@ export default {
                         fontSize: 'my_h1-small',
                         date: '14 April, 2020',
                         display: 'd-none',
-                        margin: 'mt-3'
+                        margin: 'mt-3',
+                        showShare: 'off'
                     },
                 ]
             }

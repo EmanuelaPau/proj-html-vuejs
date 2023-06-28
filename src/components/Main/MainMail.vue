@@ -1,14 +1,14 @@
 <template>
-    <div class="my_container my_mail d-flex flex-wrap justify-content-center marginBottom">
+    <div class="my_container my_mail d-flex flex-wrap justify-content-center align-items-center marginBottom">
         <div class="container-fluid">
             <div class="row d-flex justify-content-between flex-wrap">
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
                     <input type="text" placeholder="First Name">
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
                     <input type="text" placeholder="Last Name">
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
                     <input type="text" placeholder="Email Address">
                 </div>
             </div>
@@ -44,12 +44,12 @@ export default {
 
 div.my_mail {
     // background-color: aqua;
-    height: 380px;
+    height: 415px;
     background-image: url(form-bg-1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px;
+    padding: 70px;
 
     input {
         // background-color: transparent;
