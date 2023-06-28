@@ -1,8 +1,21 @@
 <template>
     <div class="carousel-wrapper my_container container-fluid p-0 marginBottom">
         <div class="row d-flex ">
-            <div v-for="movie in movieList" class="col-4 p-0 card_container">
-                <MovieCard :movie=movie />
+            <div class="d-flex">
+                <MainTitle class="title-box" :title="mainTitle" :subtitle="subtitle" />
+                <div class="arrows-box d-flex justify-content-between">
+                    <div @click="slideLeft()"
+                        class="my_circle d-flex justify-content-center align-items-center rotate-flip"><i
+                            class="fi fi-sr-paper-plane-top "></i></div>
+                    <div @click="slideRight()" class="my_circle d-flex justify-content-center align-items-center"><i
+                            class="fi fi-sr-paper-plane-top"></i></div>
+                </div>
+            </div>
+            <div class="d-flex cards_wrapper justify-content-start align-items-center">
+                <div v-for="movie in  movieList " class="col-4 p-0 card_container "
+                    :class="movie.state == 'on' ? 'my_active' : 'my_off'">
+                    <MovieCard :class="movie.state == 'on' ? 'my_active' : 'my_off'" :movie=movie />
+                </div>
             </div>
         </div>
     </div>
@@ -10,17 +23,32 @@
 
 <script>
 import MovieCard from './NewMovieCard.vue'
+import MainTitle from './MainTitle.vue'
+
 export default {
     name: 'MovieCarousel',
     props: {
     },
     components: {
         MovieCard,
+        MainTitle
     },
     data() {
         return {
             index: '',
+            mainTitle: 'New Title',
+            subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
             movieList: [
+                {
+                    img: 'card-1.jpg',
+                    title: 'Animate Blue Strack New Movie',
+                    category: 'Latest Movie',
+                    views: '367',
+                    release: 'February 12, 2016',
+                    genre: 'Drama, Action Releas',
+                    rating: '0',
+                    state: 'off',
+                },
                 {
                     img: 'card-6.jpg',
                     title: 'Quisque auctor  Movie in Strack',
@@ -29,6 +57,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '4',
+                    state: 'on',
                 },
                 {
                     img: 'card-10.jpg',
@@ -38,6 +67,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '0',
+                    state: 'off',
                 },
                 {
                     img: 'card-3.jpg',
@@ -47,6 +77,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '1',
+                    state: 'off',
                 },
                 {
                     img: 'card-11.jpg',
@@ -56,6 +87,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '0',
+                    state: 'off',
                 },
                 {
                     img: 'card-12.jpg',
@@ -65,6 +97,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '10',
+                    state: 'off',
                 },
                 {
                     img: 'card-13.jpg',
@@ -74,6 +107,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '0',
+                    state: 'off',
                 },
                 {
                     img: 'card-14.jpg',
@@ -83,6 +117,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '0',
+                    state: 'off',
                 },
                 {
                     img: 'card-15.jpg',
@@ -92,6 +127,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '1',
+                    state: 'off',
                 },
                 {
                     img: 'card-16.jpg',
@@ -101,6 +137,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '1',
+                    state: 'off',
                 },
                 {
                     img: 'card-6.jpg',
@@ -110,6 +147,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '0',
+                    state: 'off',
                 },
                 {
                     img: 'card-5.jpg',
@@ -119,6 +157,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '1',
+                    state: 'off',
                 },
                 {
                     img: 'card-4.jpg',
@@ -128,6 +167,7 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '0',
+                    state: 'off',
                 },
                 {
                     img: 'card-3.jpg',
@@ -137,29 +177,31 @@ export default {
                     release: 'February 12, 2016',
                     genre: 'Drama, Action Releas',
                     rating: '0',
+                    state: 'off',
                 },
-                {
-                    img: 'card-2.jpg',
-                    title: 'Animate Blue Strack New Movie',
-                    category: 'Latest Movie',
-                    views: '367',
-                    release: 'February 12, 2016',
-                    genre: 'Drama, Action Releas',
-                    rating: '0',
-                },
-                {
-                    img: 'card-2.jpg',
-                    title: 'Hurry Animate Blue Strack New Movie',
-                    category: 'Top Rating',
-                    views: '429',
-                    release: 'February 12, 2016',
-                    genre: 'Drama, Action Releas',
-                    rating: '0',
-                },
+
             ]
         }
     },
-    methods() {
+    methods: {
+        slideRight() {
+            if (this.index === this.movieList.length - 1) {
+                this.index = 0;
+            }
+            else {
+                this.index++;
+                return console.log('right ' + this.index);
+            }
+        },
+        slideLeft() {
+            if (this.index === 0) {
+                this.index = this.movieList.length - 1;
+            }
+            else {
+                this.index--;
+                return console.log('left ' + this.index);
+            }
+        },
     },
 }		
 </script>
@@ -171,6 +213,49 @@ export default {
 .card_container {
     border-radius: 25px;
     overflow: hidden;
+
+}
+
+.title-box {
+    width: 94%;
+}
+
+.arrows-box {
+    width: 8%;
+}
+
+.my_circle {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #2b333d;
+    color: #13be13;
+    border-radius: 50%;
+    cursor: pointer;
+
+    i {
+        height: 20px;
+        width: 30;
+    }
+}
+
+.my_circle:hover {
+    color: white;
+    background-color: #13be13;
+}
+
+.cards_wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 630px;
+}
+
+.off {
+    filter: grayscale(60%);
+    height: 530px;
+}
+
+.my_active {
+    height: 620px !important;
 }
 </style> 
 
