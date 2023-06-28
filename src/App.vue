@@ -1,6 +1,7 @@
 <template>
   <div class="app">
-    <AppHeader :navDropdown="header.dropdowns" :navLi="header.li" :navMenuLi=header.list />
+    <AppHeader :navDropdown="header.dropdowns" :navLi="header.li" :navMenuLi=header.list @show="mouseOver"
+      @hide="mouseLeave" />
     <AppMain />
     <AppFooter :aboutUs=footer.aboutUs :movieCategory=footer.movieCategory :information=footer.information
       :recentPosts=footer.recentPosts :footerBottomNav=footer.footerBottomNav :socialIcons=footer.aboutUs.socialIcons />
@@ -25,21 +26,26 @@ export default {
       header: {
         dropdowns: [{
           name: 'Home',
+          state: 'hide',
           list: ['home', 'home1', 'home2', 'home3', 'home4', 'home5', 'home6']
         },
         {
+          state: 'hide',
           name: 'Celebrity',
           list: ['Celebrity', 'Celebrity Single']
         },
         {
+          state: 'hide',
           name: 'Movie',
           list: ['Movie Post', 'Top Rate Movies', 'Movie Category', 'Single Movie']
         },
         {
+          state: 'hide',
           name: 'Page',
           list: ['Pricing Table', 'Call To Action', 'My Account', 'Cart', 'Checkout', 'Wishlist']
         },
         {
+          state: 'hide',
           name: 'Shop',
           list: ['Shop Sidebar', 'No Sidebar']
         },
@@ -137,6 +143,16 @@ export default {
           'About'
         ]
       }
+    }
+  },
+  methods: {
+    mouseOver(element) {
+      element.state = 'show';
+      console.log('show')
+    },
+    mouseLeave(element) {
+      element.state = 'hide';
+      console.log('hide')
     }
   },
 }

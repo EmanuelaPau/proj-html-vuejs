@@ -58,14 +58,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li v-for="dropDown in navDropdown" class="nav-item dropdown show">
+                        <li v-for="dropDown in navDropdown" class="nav-item dropdown show position-relative"
+                            @mouseover="$emit('show', dropDown)" @mouseleave="$emit('hide', dropDown)">
                             <a class="text-reset text-decoration-none dropdown-toggle me-3" href="#" role="button"
                                 id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ dropDown.name }}
                             </a>
 
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a v-for="element in dropDown.list" class="dropdown-item" href="#">{{ element }}</a>
+                            <div class="my_dropdown-menu position-absolute"
+                                :class="dropDown.state == 'hide' ? 'd-none' : 'd-block'" aria-labelledby="dropdownMenuLink">
+                                <a v-for="element in dropDown.list" class="dropdown-item mb-2 my_dd-item" href="#">{{
+                                    element }}</a>
 
                             </div>
                         </li>
@@ -102,10 +105,6 @@ export default {
     data() {
         return {
 
-            // links: [
-            //	'gino',
-            //	'ciao',
-            //	]
         }
     },
     methods() {
@@ -207,6 +206,15 @@ div.header-search {
     font-weight: 700 !important;
 }
 
+.my_dd-item {
+    font-size: 14px;
+    transition: all .3s;
+}
+
+.my_dd-item:hover {
+    color: #13be13;
+}
+
 .basket-items-notification {
     font-size: 12px;
     border-radius: 50%;
@@ -226,5 +234,12 @@ div.header-search {
 
 .navbar-nav li {
     margin-right: 11px;
+}
+
+.my_dropdown-menu {
+    z-index: 1;
+    width: 200px;
+    background-color: #060f19;
+    padding: 40px 10px 20px 10px;
 }
 </style> 

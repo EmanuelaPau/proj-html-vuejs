@@ -96,7 +96,6 @@ export default {
                     },
                 ]
             },
-
             movieList: [
                 {
                     img: '1-150x150.jpg',
@@ -161,7 +160,8 @@ export default {
             ],
         }
     },
-    methods() {
+    methods: {
+
     },
 }		
 </script>
