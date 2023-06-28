@@ -61,11 +61,11 @@ export default {
         aboutUs: {
           text: 'Mauris malesuada arcu eu posuere eleifen. Ut egestas tortor at leo egestas tincidunt. Nam tincidunt metus tristique tristique viverra. Mauris erat ante, egestas vitae dapibus seds.',
           socialIcons: [
-            'fa-brands fa-facebook-f', 'fa-brands fa-twitter', 'fa-brands fa-linkedin-in', 'fa-brands fa-instagram', 'fa-brands fa-pinterest'
+            {
+              icon: 'fa-brands fa-facebook-f',
+              color: 'fb - color'
+            }, { icon: 'fa-brands fa-twitter', color: 'tw-color' }, { icon: 'fa-brands fa-linkedin-in', color: 'ln-color' }, { icon: 'fa-brands fa-instagram', color: 'ig-color' }, { icon: 'fa-brands fa-pinterest', color: 'pn-color' }
           ],
-          colors: [
-            ''
-          ]
         },
         movieCategory: [
           {

@@ -4,7 +4,7 @@
         <div class=" ">
             <div class="container-fluid footer-about">
                 <div class="row my_container">
-                    <div class="col-3 px-3">
+                    <div class="col-12 col-md-6 col-lg-3 px-3">
                         <h1 class="my_h1">
                             About Us
                         </h1>
@@ -13,13 +13,13 @@
                             tincidunt metus tristique tristique viverra. Mauris erat ante, egestas vitae dapibus seds.
                         </p>
                         <ul class="list-unstyled d-flex flex-wrap">
-                            <li v-for="icon in    socialIcons   " class="me-3 social-icon">
-                                <a :class="icon" href="">
+                            <li v-for="icon in    socialIcons   " class="me-3 social-icon" :class="icon.color">
+                                <a :class="icon.icon" href="">
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-3 px-3">
+                    <div class="col-12 col-md-6 col-lg-3 px-3">
                         <h1 class="my_h1">
                             Movie Category
                         </h1>
@@ -29,7 +29,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-3 px-3">
+                    <div class="col-12 col-md-6 col-lg-3 px-3">
                         <h1 class="my_h1">
                             Information
                         </h1>
@@ -46,7 +46,7 @@
                         <div v-for="cards in recentPosts" class="footer-card d-flex">
                             <img :src="cards.img" alt="">
                             <div class="d-flex flex-wrap align-items-end">
-                                <p class="my_p m-0">{{ cards.title }}</p>
+                                <p class="my_p m-0 card-title">{{ cards.title }}</p>
                                 <p class="my_p m-0">{{ cards.date }}</p>
                             </div>
                         </div>
@@ -118,18 +118,36 @@ export default {
 
 .footer-about {
     padding-top: 70px;
-    height: 500px;
     width: 100%;
     line-height: 24px;
+    position: relative;
+}
+
+div.footer-about:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url('ft-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    opacity: 0.1;
+    z-index: 0;
 
     position: absolute;
-    left: 0;
+    top: 0;
+    right: 0;
     z-index: 1;
 }
 
 .footer-li {
     height: 48px;
     font-size: 15px;
+    transition: all .8s;
+}
+
+.footer-li:hover {
+    color: #13be13;
 }
 
 .footer-card {
@@ -141,28 +159,13 @@ export default {
         height: 100%;
         margin-right: 10px;
     }
-
-
 }
 
-div.footer-about-back {
-    height: 500px;
-    background-image: url('ft-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
-    opacity: 0.1;
-    z-index: 0;
-
-    position: relative;
-}
-
-
-.my_nav li a {
+.my_nav li {
     transition: all .8s;
 }
 
-.my_nav li a:hover {
+.my_nav li:hover {
     color: #13be13;
 }
 
@@ -176,8 +179,19 @@ div.footer-about-back {
 }
 
 h1.my_h1 {
+    position: relative;
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+h1.my_h1:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 10px;
+    width: 30px;
+    border-bottom: 2px solid white;
 }
 
 p.my_p {
@@ -188,13 +202,58 @@ p.my_p {
     height: 32px;
     width: 32px;
     border-radius: 50%;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #13be13;
+    transition: all .7s;
 
     a {
         color: white;
+        text-decoration: none;
     }
+}
+
+.social-icon:hover {
+    background-color: transparent;
+    color: #13be13;
+
+    a {
+        color: #13be13;
+    }
+}
+
+.card-title {
+    width: 200px;
+    transition: all .7s;
+    cursor: pointer;
+}
+
+.card-title:hover {
+    color: #13be13;
+}
+
+// Colors 
+
+.fb-color {
+    background-color: #02b0e8;
+}
+
+.tw-color {
+    background-color: #02b0e8;
+}
+
+.ln-color {
+    background-color: #00a098;
+}
+
+.ig-color {
+    background-color: #c22e2a;
+}
+
+.pn-color {
+    background-color: #b00a1b;
 }
 </style> 
