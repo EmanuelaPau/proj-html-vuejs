@@ -147,7 +147,7 @@ div.card-container {
 
         .details {
             height: 20%;
-            width: 100%;
+            // width: 100%;
             font-size: 14px;
             font-weight: 700;
             padding-top: 50px;
@@ -156,7 +156,7 @@ div.card-container {
             .pill {
                 padding: 0 15px;
                 height: 38px;
-                width: 100px;
+                // width: 100px;
                 background-color: #060f19;
                 display: flex;
                 align-items: center;

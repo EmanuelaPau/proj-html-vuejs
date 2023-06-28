@@ -2,6 +2,7 @@
     <main>
         <MovieSlider />
         <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
+        <MovieCarousel />
         <MainTitle :title=titles.moviePlaylist.title :subtitle=titles.moviePlaylist.subtitle />
         <MovieVideoContainers :movieList="movieList" />
         <MainJumbo />
@@ -16,6 +17,7 @@
 <script>
 //  import HelloWorld from './HelloWorld.vue'
 import MovieSlider from './Main/MainFullPageSlider.vue'
+import MovieCarousel from './Main/MovieCarousel.vue'
 import MovieVideoContainers from './Main/MainMovieVideoContainer.vue'
 import MainJumbo from './Main/MainJumbo.vue'
 import NewMoviesCardContainer from './Main/MainNewMoviesCardContainer.vue'
@@ -26,6 +28,7 @@ export default {
     name: 'AppMain',
     components: {
         MovieSlider,
+        MovieCarousel,
         MovieVideoContainers,
         MainJumbo,
         NewMoviesCardContainer,
