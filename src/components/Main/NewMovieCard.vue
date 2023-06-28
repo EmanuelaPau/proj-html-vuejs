@@ -156,10 +156,16 @@ div.card-container {
             .pill {
                 padding: 0 15px;
                 height: 38px;
+                cursor: pointer;
                 // width: 100px;
                 background-color: #060f19;
                 display: flex;
                 align-items: center;
+                transition: all .7s;
+            }
+
+            .pill:hover {
+                background-color: #13be13;
             }
 
             .round-sx {
