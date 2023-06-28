@@ -12,7 +12,7 @@
                         <span class="txtColorPrimary">** King Star **</span>
                     </div>
                     <!-- Socials buttons -->
-                    <div class="header-socials col-lg-8 col-6 d-none d-md-block">
+                    <div class="header-socials col-lg-8 col-md-3 col-6 d-flex justify-content-end">
                         <a class="text-reset " href=""><i class="fa-brands fa-facebook-f mx-2 facebook"></i></a>
                         <a class="text-reset " href=""> <i class="fa-brands fa-twitter mx-2 twitter"></i></a>
                         <a class="text-reset " href=""><i class="fa-brands fa-linkedin-in mx-2 linkedin"></i></a>
@@ -34,11 +34,12 @@
         <!-- header search  -->
         <div class="header-search line py-3">
             <div class="container-fluid">
-                <div class="row my_container m-auto">
-                    <div class="col-5">
+                <div
+                    class="row my_container m-auto d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                    <div class="col-5 d-flex justify-content-center justify-content-lg-start ">
                         <img id="my_logo" src="cropped-logo.png" alt="">
                     </div>
-                    <div class="col-7 py-3 px-0 d-flex justify-content-end">
+                    <div class="col-7 py-3 px-0 d-flex d-none d-md-flex justify-content-center justify-content-lg-end">
                         <div class="my_searchbar d-flex">
                             <input class="my_input bgColorSecondary" type="search" placeholder="Search ..."
                                 aria-label="Search">
@@ -50,7 +51,7 @@
         </div>
 
         <!-- header nav -->
-        <div class=" my_nav-font ">
+        <div class=" my_nav-font px-3 px-lg-0 ">
             <nav class="my_container navbar navbar-expand-lg py-4 ">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -179,7 +180,7 @@ img#my_logo {
 }
 
 div.header-search {
-    height: 125px;
+    // height: 125px;
 
     .my_searchbar {
         height: 50px;
