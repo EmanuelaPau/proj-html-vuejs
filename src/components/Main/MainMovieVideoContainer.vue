@@ -2,7 +2,8 @@
     <div class="container-fluid my_container marginBottom">
         <div class="row my_row">
             <div class="col-12 col-lg-8 p-0 pe-4 video_container">
-                <iframe src="https://www.youtube.com/embed/BP0k4SdquG0?wmode=opaque&rel=1" frameborder="0"></iframe>
+                <iframe title="YouTube video player" src="https://www.youtube-nocookie.com/embed/BP0k4SdquG0"
+                    allowfullscreen="true"></iframe>
             </div>
             <div class="col-12 col-lg-4 p-0 video_suggested">
                 <div class="suggested-header">
