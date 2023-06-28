@@ -1,6 +1,6 @@
 <template>
     <div class="my_container marginBottom">
-        <nav class="mb-5">
+        <nav class="mb-5 p-3 p-lg-0">
             <ul class="list-unstyled d-flex">
                 <li @click="reset()" class="active" value="all">All
                 </li>
@@ -15,7 +15,7 @@
 
         <div class="container-fluid wrapper ">
             <div class="row">
-                <div v-for="movie in newMovieCard" :movie="movie" class="col-4 mb-4"
+                <div v-for="movie in newMovieCard" :movie="movie" class=" col-12 col-md-6 col-lg-4 mb-4"
                     :class="movie.state == 'on' ? 'd-block' : 'd-none'">
 
                     <NewMovieCard class="mb-2" :movie=movie />
