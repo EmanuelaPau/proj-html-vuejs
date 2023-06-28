@@ -124,6 +124,7 @@ export default {
 
     position: absolute;
     left: 0;
+    z-index: 1;
 }
 
 .footer-li {
@@ -151,6 +152,7 @@ div.footer-about-back {
     background-position: center;
     filter: grayscale(100%);
     opacity: 0.1;
+    z-index: 0;
 
     position: relative;
 }
