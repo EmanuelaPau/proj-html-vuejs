@@ -11,10 +11,16 @@
                             class="fi fi-sr-paper-plane-top"></i></div>
                 </div>
             </div>
+
             <div class="d-flex cards_wrapper justify-content-start align-items-center">
-                <div v-for="movie in  movieList " class="col-12 col-md-6 col-lg-4 p-0 card_container "
-                    :class="movie.state == 'on' ? 'my_active' : 'my_off'">
-                    <MovieCard :class="movie.state == 'on' ? 'my_active' : 'my_off'" :movie=movie />
+                <div class=" col-12 col-md-6 col-lg-4 p-0 card_container ">
+                    <MovieCard :movie="movieList[index - 1]" class="off" />
+                </div>
+                <div class=" col-12 col-md-6 col-lg-4 p-0 card_container ">
+                    <MovieCard :movie="movieList[index]" class="my_active" />
+                </div>
+                <div class=" col-12 col-md-6 col-lg-4 p-0 card_container ">
+                    <MovieCard :movie="movieList[index + 1]" class="off" />
                 </div>
             </div>
         </div>
@@ -35,7 +41,7 @@ export default {
     },
     data() {
         return {
-            index: '',
+            index: 1,
             mainTitle: 'New Title',
             subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
             movieList: [
