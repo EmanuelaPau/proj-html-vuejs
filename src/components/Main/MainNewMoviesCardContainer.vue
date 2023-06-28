@@ -2,21 +2,26 @@
     <div class="my_container marginBottom">
         <nav class="mb-5">
             <ul class="list-unstyled d-flex">
-                <li class="active" value="all">All</li>
-                <li value="coming-soon"><span>Coming Soon</span></li>
-                <li value="latest-movie"><span>Latest Movie</span></li>
-                <li value="top-rating"><span>Top Rating</span></li>
-                <li value="top-series"><span>TV Series</span></li>
+                <li @click="reset()" class="active" value="all">All
+                </li>
+                <li @click="turnOn('Coming Soon')">
+                    <span>Coming Soon</span>
+                </li>
+                <li @click="turnOn('Latest Movie')" value="latest-movie"><span>Latest Movie</span></li>
+                <li @click="turnOn('Top Rating')" value="top-rating"><span>Top Rating</span></li>
+                <li @click="turnOn('TV Series')" value="top-series"><span>TV Series</span></li>
             </ul>
         </nav>
 
         <div class="container-fluid wrapper ">
             <div class="row">
-                <div v-for="movie in newMovieCard" class="col-4 mb-4">
+                <div v-for="movie in newMovieCard" :movie="movie" class="col-4 mb-4"
+                    :class="movie.state == 'on' ? 'd-block' : 'd-none'">
 
                     <NewMovieCard class="mb-2" :movie=movie />
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -41,6 +46,7 @@ export default {
                     release: 'February 12, 2016',
                     genres: 'Drama, Action Releas',
                     views: '426',
+                    state: 'on',
                 },
                 {
                     img: 'card-2.jpg',
@@ -49,14 +55,16 @@ export default {
                     release: 'February 12, 2016',
                     genres: 'Drama, Action Releas',
                     views: '367',
+                    state: 'on',
                 },
                 {
                     img: 'card-3.jpg',
                     title: 'Blue Strack New Animate Movie',
-                    category: ' Coming Soon',
+                    category: 'Coming Soon',
                     release: 'February 12, 2016',
                     genres: 'Drama, Action Releas',
                     views: '428',
+                    state: 'on',
                 },
                 {
                     img: 'card-4.jpg',
@@ -65,6 +73,7 @@ export default {
                     release: 'February 12, 2016',
                     genres: 'Drama, Action Releas',
                     views: '342',
+                    state: 'on',
                 },
                 {
                     img: 'card-5.jpg',
@@ -73,6 +82,7 @@ export default {
                     release: 'February 12, 2016',
                     genres: 'Drama, Action Releas',
                     views: '354',
+                    state: 'on',
                 },
                 {
                     img: 'card-6.jpg',
@@ -81,11 +91,27 @@ export default {
                     release: 'February 12, 2016',
                     genres: 'Drama, Action Releas',
                     views: '511',
+                    state: 'on',
                 },
             ],
         }
     },
-    methods() {
+    methods: {
+        turnOn(element) {
+            this.newMovieCard.forEach((item) => {
+                if (item.category == element) {
+                    item.state = 'on';
+                }
+                else {
+                    item.state = 'off';
+                }
+            })
+        },
+        reset() {
+            this.newMovieCard.forEach((item) => {
+                item.state = 'on';
+            })
+        },
     },
 }		
 </script>
