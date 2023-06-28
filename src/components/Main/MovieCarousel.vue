@@ -14,14 +14,15 @@
 
             <div class="d-flex cards_wrapper justify-content-start align-items-center">
                 <div class=" col-12 col-md-6 col-lg-4 p-0 card_container ">
-                    <MovieCard :movie="movieList[index - 1]" class="off" />
+                    <MovieCard :movie="index <= 1 ? movieList[movieList.length - 1] : movieList[index - 1]" class="off" />
                 </div>
                 <div class=" col-12 col-md-6 col-lg-4 p-0 card_container ">
                     <MovieCard :movie="movieList[index]" class="my_active" />
                 </div>
                 <div class=" col-12 col-md-6 col-lg-4 p-0 card_container ">
-                    <MovieCard :movie="movieList[index + 1]" class="off" />
+                    <MovieCard :movie="index === movieList.length - 1 ? movieList[0] : movieList[index + 1]" class="off" />
                 </div>
+
             </div>
         </div>
     </div>
@@ -41,20 +42,11 @@ export default {
     },
     data() {
         return {
-            index: 1,
+            index: 0,
             mainTitle: 'New Title',
             subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
             movieList: [
-                {
-                    img: 'card-1.jpg',
-                    title: 'Animate Blue Strack New Movie',
-                    category: 'Latest Movie',
-                    views: '367',
-                    release: 'February 12, 2016',
-                    genre: 'Drama, Action Releas',
-                    rating: '0',
-                    state: 'off',
-                },
+
                 {
                     img: 'card-6.jpg',
                     title: 'Quisque auctor  Movie in Strack',
@@ -185,6 +177,16 @@ export default {
                     rating: '0',
                     state: 'off',
                 },
+                {
+                    img: 'card-1.jpg',
+                    title: 'Animate Blue Strack New Movie',
+                    category: 'Latest Movie',
+                    views: '367',
+                    release: 'February 12, 2016',
+                    genre: 'Drama, Action Releas',
+                    rating: '0',
+                    state: 'off',
+                },
 
             ]
         }
@@ -199,17 +201,15 @@ export default {
 
                 return console.log('right ' + this.index);
             }
-            card[this.index].state = 'on';
         },
         slideLeft(card) {
-            if (this.index === 0) {
+            if (this.index <= 1) {
                 this.index = this.movieList.length - 1;
             }
             else {
                 this.index--;
                 return console.log('left ' + this.index);
             }
-            card[this.index].state = 'on';
         },
     },
 }		
