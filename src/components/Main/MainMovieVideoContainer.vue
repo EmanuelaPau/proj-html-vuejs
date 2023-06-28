@@ -1,10 +1,10 @@
 <template>
     <div class="container-fluid my_container marginBottom">
         <div class="row my_row">
-            <div class="col-8 p-0 pe-4 video_container">
+            <div class="col-12 col-lg-8 p-0 pe-4 video_container">
                 <iframe src="https://www.youtube.com/embed/BP0k4SdquG0?wmode=opaque&rel=1" frameborder="0"></iframe>
             </div>
-            <div class="col-4 p-0 video_suggested">
+            <div class="col-12 col-lg-4 p-0 video_suggested">
                 <div class="suggested-header">
                     <h1 class="my_sheader-title">New Movie</h1>
                     <p class="mb-0">Plyng 24</p>
@@ -61,11 +61,11 @@ export default {
 @use '../../styles/general.scss';
 
 div.my_row {
-    height: 540px;
+    // height: 540px;
 
     div.video_container {
         iframe {
-            height: 100%;
+            height: 540px;
             width: 100%;
         }
     }
