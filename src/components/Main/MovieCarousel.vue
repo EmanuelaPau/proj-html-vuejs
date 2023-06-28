@@ -4,10 +4,10 @@
             <div class="d-flex">
                 <MainTitle class="title-box" :title="mainTitle" :subtitle="subtitle" />
                 <div class="arrows-box d-flex justify-content-between">
-                    <div @click="slideLeft()"
+                    <div @click="slideLeft(movie)"
                         class="my_circle d-flex justify-content-center align-items-center rotate-flip"><i
                             class="fi fi-sr-paper-plane-top "></i></div>
-                    <div @click="slideRight()" class="my_circle d-flex justify-content-center align-items-center"><i
+                    <div @click="slideRight(movie)" class="my_circle d-flex justify-content-center align-items-center"><i
                             class="fi fi-sr-paper-plane-top"></i></div>
                 </div>
             </div>
@@ -184,16 +184,18 @@ export default {
         }
     },
     methods: {
-        slideRight() {
+        slideRight(card) {
             if (this.index === this.movieList.length - 1) {
                 this.index = 0;
             }
             else {
                 this.index++;
+
                 return console.log('right ' + this.index);
             }
+            card[this.index].state = 'on';
         },
-        slideLeft() {
+        slideLeft(card) {
             if (this.index === 0) {
                 this.index = this.movieList.length - 1;
             }
@@ -201,6 +203,7 @@ export default {
                 this.index--;
                 return console.log('left ' + this.index);
             }
+            card[this.index].state = 'on';
         },
     },
 }		

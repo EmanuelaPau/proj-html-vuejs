@@ -3,16 +3,16 @@
         <!-- Header top -->
         <div class="line">
             <div class="container-fluid">
-                <div class="row py-3 my_container m-auto">
+                <div class="row py-3 my_container m-auto d-flex flex-wrap justify-content-between">
 
                     <!-- Mail -->
-                    <div class="header-mail col-3">
+                    <div class="header-mail col-lg-3 col-6">
                         <i class="fa-regular fa-envelope me-1"></i>
                         <span>Superhit Top Movie </span>
                         <span class="txtColorPrimary">** King Star **</span>
                     </div>
                     <!-- Socials buttons -->
-                    <div class="header-socials col-8">
+                    <div class="header-socials col-lg-8 col-6 d-none d-md-block">
                         <a class="text-reset " href=""><i class="fa-brands fa-facebook-f mx-2 facebook"></i></a>
                         <a class="text-reset " href=""> <i class="fa-brands fa-twitter mx-2 twitter"></i></a>
                         <a class="text-reset " href=""><i class="fa-brands fa-linkedin-in mx-2 linkedin"></i></a>
@@ -21,7 +21,7 @@
                     </div>
 
                     <!-- Login -->
-                    <div class="header-login col-1">
+                    <div class="header-login col-lg-1 d-none d-lg-block">
                         <a class="text-reset text-decoration-none" href="#">
                             <i class="fa-solid fa-lock me-2"></i>
                             <span>Login</span>
@@ -48,6 +48,7 @@
                 </div>
             </div>
         </div>
+
         <!-- header nav -->
         <div class=" my_nav-font ">
             <nav class="my_container navbar navbar-expand-lg py-4 ">
@@ -120,6 +121,14 @@ div.line {
     border-bottom: 1px solid #2b333d;
 }
 
+.header-mail {
+
+    span,
+    i {
+        font-size: 14px;
+    }
+}
+
 .header-socials {
 
     i.facebook:hover,
@@ -128,10 +137,12 @@ div.line {
     i.instagram:hover,
     i.google:hover {
         color: #13be13;
+
     }
 
     i {
         transition: all .8s;
+        font-size: 14px;
     }
 
     i.facebook {
@@ -152,6 +163,14 @@ div.line {
 
     i.google {
         color: #db4a39;
+    }
+}
+
+.header-login {
+
+    i,
+    span {
+        font-size: 14px;
     }
 }
 
