@@ -1,4 +1,5 @@
 <template>
+    <MainTitle class="title-box" :title="mainTitle" :subtitle="subtitle" />
     <div class="my_container marginBottom">
         <nav class="mb-5 p-3 p-lg-0">
             <ul class="list-unstyled d-flex">
@@ -29,15 +30,19 @@
 
 <script>
 import NewMovieCard from './NewMovieCard.vue'
+import MainTitle from './MainTitle.vue'
 export default {
     name: 'MovieVideoContainers',
     props: {
     },
     components: {
         NewMovieCard,
+        MainTitle
     },
     data() {
         return {
+            mainTitle: 'New Movie',
+            subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
             newMovieCard: [
                 {
                     img: 'card-1.jpg',

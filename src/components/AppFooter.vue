@@ -121,6 +121,7 @@ export default {
     width: 100%;
     line-height: 24px;
     position: relative;
+    z-index: 1;
 }
 
 div.footer-about:before {
@@ -137,13 +138,13 @@ div.footer-about:before {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
 }
 
 .footer-li {
     height: 48px;
     font-size: 15px;
     transition: all .8s;
+    z-index: 1;
 }
 
 .footer-li:hover {
@@ -154,15 +155,18 @@ div.footer-about:before {
     width: 100%;
     height: 85px;
     margin-bottom: 30px;
+    z-index: 1;
 
     img {
         height: 100%;
         margin-right: 10px;
+        z-index: 1;
     }
 }
 
 .my_nav li {
     transition: all .8s;
+    z-index: 1;
 }
 
 .my_nav li:hover {
@@ -172,6 +176,7 @@ div.footer-about:before {
 .my_info a {
     transition: all .8s;
     color: #13be13;
+    z-index: 1;
 }
 
 .my_info a:hover {
@@ -182,6 +187,7 @@ h1.my_h1 {
     position: relative;
     font-size: 18px;
     margin-bottom: 40px;
+    z-index: 1;
 }
 
 h1.my_h1:after {
@@ -192,10 +198,13 @@ h1.my_h1:after {
     height: 10px;
     width: 30px;
     border-bottom: 2px solid white;
+    z-index: 1;
 }
 
 p.my_p {
     font-size: 14px;
+    z-index: 1;
+    z-index: 1;
 }
 
 .social-icon {
@@ -214,6 +223,8 @@ p.my_p {
         color: white;
         text-decoration: none;
     }
+
+    z-index: 1;
 }
 
 .social-icon:hover {
@@ -229,6 +240,7 @@ p.my_p {
     width: 200px;
     transition: all .7s;
     cursor: pointer;
+    z-index: 1;
 }
 
 .card-title:hover {

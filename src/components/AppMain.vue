@@ -1,14 +1,10 @@
 <template>
     <main>
         <MovieSlider />
-        <!-- <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle /> -->
         <MovieCarousel />
-        <MainTitle :title=titles.moviePlaylist.title :subtitle=titles.moviePlaylist.subtitle />
         <MovieVideoContainers :movieList="movieList" />
         <MainJumbo />
-        <MainTitle :title=titles.newMovie.title :subtitle=titles.newMovie.subtitle />
         <NewMoviesCardContainer :movieList=movieList />
-        <MainTitle :title=titles.latestNews.title :subtitle=titles.latestNews.subtitle />
         <SquareCardsContainer />
         <MainMail />
     </main>

@@ -1,4 +1,5 @@
 <template>
+    <MainTitle class="title-box" :title="mainTitle" :subtitle="subtitle" />
     <div class="my_container marginBottom">
         <div class="container-fluid p-0">
             <div class="row">
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+import MainTitle from './MainTitle.vue'
 import MainSquareCards from './MainSquareCards.vue';
 export default {
     name: 'SquareCardsContainer',
@@ -30,11 +32,14 @@ export default {
 
     },
     components: {
+        MainTitle,
         MainSquareCards,
-        MainSquareCards
+        MainSquareCards,
     },
     data() {
         return {
+            mainTitle: 'Latest News',
+            subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
             squareCards: {
                 big: {
                     title: 'Actor The Concept Movie High Concept Theory see the post',

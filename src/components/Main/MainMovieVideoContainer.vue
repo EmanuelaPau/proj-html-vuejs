@@ -1,4 +1,5 @@
 <template>
+    <MainTitle class="title-box" :title="mainTitle" :subtitle="subtitle" />
     <div class="container-fluid my_container marginBottom">
         <div class="row my_row">
             <div class="col-12 col-lg-8 p-0 pe-4 video_container">
@@ -36,20 +37,19 @@
 </template>
 
 <script>
-
+import MainTitle from './MainTitle.vue'
 export default {
     name: 'MovieVideoContainers',
     props: {
         movieList: 'Object'
     },
     components: {
+        MainTitle
     },
     data() {
         return {
-            // links: [
-            //	'gino',
-            //	'ciao',
-            //	]
+            mainTitle: 'Movie Playlist',
+            subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
         }
     },
     methods() {

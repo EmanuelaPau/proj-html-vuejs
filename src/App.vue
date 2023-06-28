@@ -51,7 +51,14 @@ export default {
         },
         ],
         li: [
-          'Blog', 'Contact Us'
+          {
+            name: 'Blog',
+            link: '#'
+          },
+          {
+            name: 'Contact Us',
+            link: '#'
+          },
         ]
       },
 

@@ -74,7 +74,7 @@
                             </div>
                         </li>
                         <li v-for="nav in navLi" class="nav-item">
-                            <a class="text-reset text-decoration-none me-3" href="">{{ nav }}</a>
+                            <a class="text-reset text-decoration-none me-3" :href="nav.link">{{ nav.name }}</a>
                         </li>
 
                     </ul>
