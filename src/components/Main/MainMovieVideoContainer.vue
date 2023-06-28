@@ -16,7 +16,7 @@
                             <img :src="movie.img" :alt="movie.title">
                         </div>
                         <div class="text-container">
-                            <h2 class="">{{ movie.title }}</h2>
+                            <h2 class="movie-title">{{ movie.title }}</h2>
                             <p class="views">{{ movie.views }}</p>
                             <div class="text d-flex justify-content-between">
                                 <p class=" date">
@@ -109,9 +109,16 @@ div.my_row {
                 }
 
                 .text-container {
+                    cursor: pointer;
+
                     h2 {
                         font-size: 17px;
                         line-height: 25px;
+                        transition: all .6s;
+                    }
+
+                    h2:hover {
+                        color: #13be13;
                     }
 
                     p.views {
