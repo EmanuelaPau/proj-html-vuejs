@@ -146,7 +146,7 @@ export default {
 
 div.footer-about-back {
     height: 500px;
-    background-image: url('../../public/ft-bg.jpg');
+    background-image: url('ft-bg.jpg');
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);

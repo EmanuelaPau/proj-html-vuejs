@@ -35,7 +35,7 @@
             <div class="container-fluid">
                 <div class="row my_container m-auto">
                     <div class="col-5">
-                        <img id="my_logo" src="../../public/cropped-logo.png" alt="">
+                        <img id="my_logo" src="cropped-logo.png" alt="">
                     </div>
                     <div class="col-7 py-3 px-0 d-flex justify-content-end">
                         <div class="my_searchbar d-flex">

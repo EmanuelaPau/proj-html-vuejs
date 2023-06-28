@@ -45,7 +45,7 @@ export default {
 div.my_mail {
     // background-color: aqua;
     height: 380px;
-    background-image: url(../../../public/form-bg-1.png);
+    background-image: url(form-bg-1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

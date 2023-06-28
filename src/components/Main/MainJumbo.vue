@@ -85,7 +85,7 @@ div.texts-container {
 div.my_jumbo {
     background-color: aqua;
     height: 650px;
-    background-image: url(../../../public/coming-bg.jpg);
+    background-image: url(coming-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
