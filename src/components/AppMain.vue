@@ -34,20 +34,6 @@ export default {
     },
     data() {
         return {
-            titles: {
-                newMovie: {
-                    title: 'New Movie',
-                    subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
-                },
-                moviePlaylist: {
-                    title: 'Movie Playlist',
-                    subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
-                },
-                latestNews: {
-                    title: 'Latest News',
-                    subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesettin',
-                }
-            },
             squareCards: {
                 big: {
                     title: 'Actor The Concept Movie High Concept Theory see the post',
